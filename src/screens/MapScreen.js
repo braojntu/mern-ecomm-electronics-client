@@ -45,8 +45,8 @@ export default function MapScreen() {
   };
   useEffect(() => {
     const fetch = async () => {
-      const { data } = await axios(`${API}/keys/google`, {
-        headers: { Authorization: `BEARER ${userInfo.token}` },
+      const {data} = await axios(`${API}/keys/google`, {
+        headers: {Authorization: `BEARER ${userInfo.token}`},
       });
       setGoogleApiKey(data.key);
       getUserCurrentLocation();
@@ -56,7 +56,7 @@ export default function MapScreen() {
     ctxDispatch({
       type: 'SET_FULLBOX_ON',
     });
-  }, [ctxDispatch]);
+  }, [ctxDispatch, userInfo.token]);
 
   const onLoad = (map) => {
     mapRef.current = map;
