@@ -273,7 +273,7 @@ function App() {
         </main>
         <footer>
           <div className="text-center">
-            All rights reserved. © Electronics Store. 2022
+            Copyright © 2022 Electronic Store. All rights reserved.
           </div>
         </footer>
       </div>
